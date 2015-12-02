@@ -1,0 +1,55 @@
+$t__font--primary: 'sans-serif';
+$t__font--secondary: 'serif';
+$t__font--tertiary: 'monospace';
+
+$modular-scale-ratio: $major-third;
+$modular-scale-base: 1rem;
+
+$t__size--base: 15px;
+$t__body--small: modular-scale(-1);
+$t__body--medium: modular-scale(0);
+$t__body--large: modular-scale(1);
+$t__title--xsmall: modular-scale(2);
+$t__title--small: modular-scale(3);
+$t__title--medium: modular-scale(4);
+$t__title--large: modular-scale(5);
+$t__title--xlarge: modular-scale(8);
+$t__weight--xlight: 100;
+$t__weight--light: 200;
+$t__weight--book: 400;
+$t__weight--bold: 600;
+$t__weight--black: 900;
+$t__lineHeight--tight: 1;
+$t__lineHeight--semiTight: 1.4;
+$t__lineHeight--normal: 1.563;
+$t__lineHeight--loose: 1.953;
+
+@mixin t__smallCaps() {
+  text-transform: uppercase;
+  font-variant: small-caps;
+  letter-spacing: 0.2rem;
+}
+
+@mixin t__allCaps() {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+@mixin t__noDecoration() {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+@mixin t__unorderedList() {
+  list-style-type: disc;
+  list-style-position: inside;
+  list-style-image: none;
+}
+
+@mixin t__orderedList() {
+  list-style-type: decimal-leading-zero;
+  list-style-position: outside;
+  list-style-image: none;
+}

@@ -1,0 +1,137 @@
+{
+  "data": {
+    "styleguide": {
+      "-K4YZS0NU4nxv1YxNTpl": {
+        "_sort_create_date": 1449074460,
+        "_sort_last_updated": 1449074460,
+        "_sort_publish_date": 1449074460,
+        "create_date": "2015-12-02T11:41:00-05:00",
+        "element": [
+          {
+            "description": "<p>This image will show up when shared on Facebook.\n</p>",
+            "title": "Facebook OG Image"
+          },
+          {
+            "description": "<p>This image will show up when shared on Twitter.\n</p>",
+            "title": "Twitter Card Image"
+          }
+        ],
+        "last_updated": "2015-12-02T11:41:00-05:00",
+        "name": "Social MetaData",
+        "preview_url": "9352ec0b-9741-04de-f501-8dc4c59f8b52",
+        "publish_date": "2015-12-02T11:41:00-05:00"
+      }
+    }
+  },
+  "settings": {},
+  "contentType": {
+    "styleguide": {
+      "controls": [
+        {
+          "controlType": "textfield",
+          "hidden": false,
+          "label": "Name",
+          "locked": true,
+          "name": "name",
+          "required": true,
+          "showInCms": true
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Create Date",
+          "locked": true,
+          "name": "create_date",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Last Updated",
+          "locked": true,
+          "name": "last_updated",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "datetime",
+          "hidden": true,
+          "label": "Publish Date",
+          "locked": true,
+          "name": "publish_date",
+          "required": false,
+          "showInCms": false
+        },
+        {
+          "controlType": "grid",
+          "controls": [
+            {
+              "controlType": "textfield",
+              "hidden": false,
+              "label": "Title",
+              "locked": false,
+              "name": "title",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "image",
+              "hidden": false,
+              "label": "Example",
+              "locked": false,
+              "name": "example",
+              "required": false,
+              "showInCms": true
+            },
+            {
+              "controlType": "wysiwyg",
+              "hidden": false,
+              "label": "Description",
+              "locked": false,
+              "meta": {
+                "image": true,
+                "javascript": true,
+                "link": true,
+                "quote": true,
+                "table": true,
+                "video": true
+              },
+              "name": "description",
+              "required": false,
+              "showInCms": true
+            }
+          ],
+          "hidden": false,
+          "label": "Element",
+          "locked": false,
+          "name": "element",
+          "required": false,
+          "showInCms": true
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Preview URL",
+          "locked": true,
+          "name": "preview_url",
+          "required": true,
+          "showInCms": false
+        },
+        {
+          "controlType": "textfield",
+          "hidden": true,
+          "label": "Slug",
+          "locked": true,
+          "name": "slug",
+          "required": false,
+          "showInCms": false
+        }
+      ],
+      "individualMD5": "095ac64cf8ffa542a3b164d179eb083f",
+      "listMD5": "92f312a1a744243358dd3e222ff1db2e",
+      "name": "Styleguide",
+      "oneOff": false
+    }
+  }
+}

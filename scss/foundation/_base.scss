@@ -1,0 +1,103 @@
+//Basic Setup-------------------------------------------
+html {
+  font-family: $t__font--primary;
+  line-height: $t__lineHeight--normal;
+  font-weight: $t__weight--book;
+  font-size: $t__size--base;
+}
+
+body {
+  font-size: $t__body--large;
+  font-weight: $t__weight--light;
+}
+
+a {
+  @include t__noDecoration;
+  display: block;
+
+  p & {
+    display: inline;
+  }
+}
+
+strong {
+  font-weight: $t__weight--bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+p {
+
+}
+
+h1 {
+  font-family: $t__font--secondary;
+  font-size: $t__title--large;
+  font-weight: $t__weight--book;
+}
+
+h2 {
+  font-family: $t__font--secondary;
+  font-size: $t__title--medium;
+  font-weight: $t__weight--book;
+}
+
+h3 {
+  font-family: $t__font--secondary;
+  font-size: $t__title--small;
+  font-weight: $t__weight--book;
+}
+
+h4 {
+  font-family: $t__font--secondary;
+  font-size: $t__title--small;
+  font-weight: $t__weight--book;
+}
+
+h5 {
+  font-family: $t__font--secondary;
+  font-size: $t__title--xsmall;
+  font-weight: $t__weight--book;
+}
+
+h6 {
+  font-family: $t__font--tertiary;
+  font-size: $t__body--small;
+  font-weight: $t__weight--bold;
+}
+
+figcaption {
+  font-family: $t__font--tertiary;
+  font-size: $t__body--small;
+  font-weight: $t__weight--book;
+
+  span {
+    font-weight: $t__weight--bold;
+  }
+}
+
+blockquote {
+
+}
+
+ol {
+  @include t__orderedList;
+}
+
+ul {
+  @include t__unorderedList;
+}
+
+div,
+img {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+}
+
+//Extra Setup ---------------------------------------
