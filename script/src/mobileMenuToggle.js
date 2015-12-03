@@ -69,7 +69,7 @@ function MobileMenuToggle() {
 
     function resizeCheck() {
         $(window).resize(function() {
-            $('.nav').removeClass('nav__toggled');
+            $('.nav').removeClass('nav--toggled');
             if (Modernizr.mq('(min-width: 768px)')) {
                 $('.nav__item--activator, .nav__item--deactivator').addClass('nav__item--hide').removeClass('nav__item--show');
                 $('.nav__item--pages, .nav__logo').addClass('nav__item--show').removeClass('nav__item--hide');
