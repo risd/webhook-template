@@ -1,7 +1,6 @@
 .header {
   text-align: center;
   z-index: 2000;
-
   @include media($mobile) {
     @include outer-container(90vw);
   };
@@ -18,6 +17,7 @@
   left: 0;
   transition: 0.2s top ease;
   z-index: 9999;
+  background-color: $c__white;
 
   @include media($mobile) {
     @include span-columns(6 of 6);
@@ -45,15 +45,15 @@
   };
 }
 
-.nav__up {
+.nav--up {
   top: -100px;
 }
 
-.nav__down {
+.nav--down {
   top: 0;
 }
 
-.nav--container {
+.nav__container {
   list-style: none;
 
   @include media($mobile) {
@@ -81,7 +81,7 @@
   };
 }
 
-.nav--item {
+.nav__item {
   transition: 0.1s all ease;
   align-items: center;
   justify-content: center;
@@ -128,7 +128,7 @@
   }
 }
 
-.nav--logo {
+.nav__logo {
   @include media($mobile) {
     display: none;
   };
@@ -154,7 +154,7 @@
   }
 }
 
-.nav--item--activator {
+.nav__item--activator {
   @include media($mobile) {
     display: flex;
     width: 100%;
@@ -174,7 +174,7 @@
   };
 }
 
-.nav--item--deactivator {
+.nav__item--deactivator {
   cursor: pointer;
 
   @include media($mobile) {
@@ -194,18 +194,18 @@
   };
 }
 
-.nav--item__active {
+.nav__item--active {
 
 }
 
-.nav--item__show {
+.nav__item--show {
   display: flex;
 }
 
-.nav--item__hide {
+.nav__item--hide {
   display: none;
 }
 
-.nav__toggled {
+.nav--toggled {
   height: 100%;
 }

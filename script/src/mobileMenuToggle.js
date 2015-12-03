@@ -15,16 +15,16 @@ function MobileMenuToggle() {
 
     function navToggle() {
 
-        $('.nav--item--activator').click(function(){
-            $('.nav--item--pages, .nav--item--deactivator, .nav--logo').addClass('nav--item__show').removeClass('nav--item__hide');
-            $('.nav--item--activator').addClass('nav--item__hide').removeClass('nav--item__show');
-            $('.nav').addClass('nav__toggled');
+        $('.nav__item--activator').click(function(){
+            $('.nav__item--pages, .nav__item--deactivator, .nav__logo').addClass('nav__item--show').removeClass('nav__item--hide');
+            $('.nav__item--activator').addClass('nav__item--hide').removeClass('nav__item--show');
+            $('.nav').addClass('nav--toggled');
             disableScroll();
         });
-        $('.nav--item--deactivator').click(function(){
-            $('.nav--item--pages, .nav--item--deactivator, .nav--logo').addClass('nav--item__hide').removeClass('nav--item__show');
-            $('.nav--item--activator').addClass('nav--item__show').removeClass('nav--item__hide');
-            $('.nav').removeClass('nav__toggled');
+        $('.nav__item--deactivator').click(function(){
+            $('.nav__item--pages, .nav__item--deactivator, .nav__logo').addClass('nav__item--hide').removeClass('nav__item--show');
+            $('.nav__item--activator').addClass('nav__item--show').removeClass('nav__item--hide');
+            $('.nav').removeClass('nav--toggled');
             enableScroll();
 
         });
@@ -71,11 +71,11 @@ function MobileMenuToggle() {
         $(window).resize(function() {
             $('.nav').removeClass('nav__toggled');
             if (Modernizr.mq('(min-width: 768px)')) {
-                $('.nav--item--activator, .nav--item--deactivator').addClass('nav--item__hide').removeClass('nav--item__show');
-                $('.nav--item--pages, .nav--logo').addClass('nav--item__show').removeClass('nav--item__hide');
+                $('.nav__item--activator, .nav__item--deactivator').addClass('nav__item--hide').removeClass('nav__item--show');
+                $('.nav__item--pages, .nav__logo').addClass('nav__item--show').removeClass('nav__item--hide');
             } else {
-                $('.nav--item--activator').addClass('nav--item__show').removeClass('nav--item__hide');
-                $('.nav--item--pages, .nav--item--deactivator, .nav--logo').addClass('nav--item__hide').removeClass('nav--item__show');
+                $('.nav__item--activator').addClass('nav__item--show').removeClass('nav__item--hide');
+                $('.nav__item--pages, .nav__item--deactivator, .nav__logo').addClass('nav__item--hide').removeClass('nav__item--show');
             }
         });
 

@@ -35,10 +35,10 @@ function StickyNav() {
                 return;
             }
             if (scrollTopPos > lastScrollTop && scrollTopPos > navbarHeight) {
-                $('.nav').removeClass('nav__down').addClass('nav__up');
+                $('.nav').removeClass('nav--down').addClass('nav--up');
             } else {
                 if ((scrollTopPos + $(window).height()) < $(document).height()) {
-                    $('.nav').removeClass('nav__up').addClass('nav__down');
+                    $('.nav').removeClass('nav--up').addClass('nav--down');
                 }
             }
 

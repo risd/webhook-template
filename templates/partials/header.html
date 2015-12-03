@@ -19,40 +19,29 @@
 
 
 <section class="header">
-    {# for each navigation item #}
-    {% for navItem in navData %}
-        {# add active class if active #}
-        {% if navItem.active %}
-            {% set cls = 'nav--item__active' %}
-        {% else %}
-            {% set cls = '' %}
-        {% endif %}
+  {# for each navigation item #}
+  {% for navItem in navData %}
+  {# add active class if active #}
+  {% if navItem.active %}
+  {% set cls = 'nav__item--active' %}
+  {% else %}
+  {% set cls = '' %}
+  {% endif %}
 
-        {% if loop.first %}
-        <nav class="nav">
-            <ul class="nav--container">
-                <a href="/" class="nav--item nav--logo {{ cls }}">
-                  {# {% include "templates/partials/logo.html" %} #}
-                </a>
-                <a class="nav--item nav--item--activator">Menu</a>
-                <a class="nav--item nav--item--deactivator">×</a>
-        {% endif %}
-        {% for page in cms.pages %}
-            {# check if the page name is the same as the nav item name #}
-            {% if navItem.name === page.name %}
-                {# check if show toggle is true #}
-                {% if page.show === true %}
-                    <a href="{{ navItem.url }}" class="nav--item nav--item--pages {{ cls }}">
-                        {{navItem.name}}
-                    </a>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
+  {% if loop.first %}
+  <nav class="nav">
+    <ul class="nav__container">
+      {# <a href="/" class="nav--item nav--logo {{ cls }}">{% include "templates/partials/risdlogo.html" %}</a> #}
+      <a class="nav__item nav__item--activator">Menu</a>
+      <a class="nav__item nav__item--deactivator">×</a>
+      {% endif %}
 
-        {% if loop.last %}
-            </ul>
-        </nav>
-        {% endif %}
+      <a class="nav__item nav__item--pages {{ cls }}" href="{{ navItem.url }}">{{navItem.name}}</a>
 
-    {% endfor %}
+      {% if loop.last %}
+    </ul>
+  </nav>
+  {% endif %}
+
+  {% endfor %}
 </section>
