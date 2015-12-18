@@ -1,6 +1,6 @@
-$t__font--primary: 'sans-serif';
-$t__font--secondary: 'serif';
-$t__font--tertiary: 'monospace';
+$t__font--primary: 'Helvetica', sans-serif;
+$t__font--secondary: serif;
+$t__font--tertiary: 'Consolas',monospace;
 
 $modular-scale-ratio: $major-third;
 $modular-scale-base: 1rem;
@@ -13,26 +13,28 @@ $t__title--xsmall: modular-scale(2);
 $t__title--small: modular-scale(3);
 $t__title--medium: modular-scale(4);
 $t__title--large: modular-scale(5);
-$t__title--xlarge: modular-scale(8);
+$t__title--xlarge: modular-scale(7);
+
 $t__weight--xlight: 100;
 $t__weight--light: 200;
 $t__weight--book: 400;
 $t__weight--bold: 600;
 $t__weight--black: 900;
+
 $t__lineHeight--tight: 1;
-$t__lineHeight--semiTight: 1.4;
-$t__lineHeight--normal: 1.563;
+$t__lineHeight--semiTight: 1.2;
+$t__lineHeight--normal: 1.4;
 $t__lineHeight--loose: 1.953;
 
-@mixin t__smallCaps() {
-  text-transform: uppercase;
-  font-variant: small-caps;
-  letter-spacing: 0.2rem;
-}
+$t__border: 1px solid $c__text;
+$t__border--pop: 1px solid $c__pop;
+$t__border--inverted: 1px solid $c__background;
 
-@mixin t__allCaps() {
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
+
+@mixin antialiased {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
 }
 
 @mixin t__noDecoration() {
@@ -49,7 +51,7 @@ $t__lineHeight--loose: 1.953;
 }
 
 @mixin t__orderedList() {
-  list-style-type: decimal-leading-zero;
+  list-style-type: decimal;
   list-style-position: outside;
   list-style-image: none;
 }

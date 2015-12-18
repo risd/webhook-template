@@ -4,16 +4,90 @@ html {
   line-height: $t__lineHeight--normal;
   font-weight: $t__weight--book;
   font-size: $t__size--base;
+  color: $c__text;
 }
 
 body {
   font-size: $t__body--large;
   font-weight: $t__weight--light;
+  color: $c__text;
+  background-color: $c__background;
+}
+
+main {
+  margin-top: $l__space--xxxlarge;
+  margin-bottom: $l__space--xxlarge;
+  @include media($mobile) {
+      @include outer-container(80vw);
+  };
+  @include media($tablet) {
+      @include outer-container(100vw);
+  };
+}
+
+h1 {
+  font-family: $t__font--secondary;
+  font-size: $t__title--xlarge;
+  font-weight: $t__weight--book;
+  line-height: $t__lineHeight--semiTight;
+  color: $c__text;
+}
+
+h2 {
+  font-family: $t__font--primary;
+  font-size: $t__title--medium;
+  font-weight: $t__weight--bold;
+  line-height: $t__lineHeight--semiTight;
+  color: $c__text;
+}
+
+h3 {
+  font-family: $t__font--primary;
+  font-size: $t__title--xsmall;
+  font-weight: $t__weight--bold;
+  line-height: $t__lineHeight--semiTight;
+  color: $c__text;
+}
+
+h4 {
+  font-family: $t__font--primary;
+  font-size: $t__body--large;
+  font-weight: $t__weight--bold;
+  line-height: $t__lineHeight--semiTight;
+  color: $c__text;
+}
+
+h5 {
+  font-family: $t__font--primary;
+  font-size: $t__body--large;
+  font-weight: $t__weight--book;
+  line-height: $t__lineHeight--normal;
+  color: $c__pop;
+}
+
+h6 {
+  font-family: $t__font--tertiary;
+  font-size: $t__body--small;
+  font-weight: $t__weight--bold;
+  line-height: $t__lineHeight--normal;
+  color: $c__text;
+}
+
+p {
+  font-family: $t__font--primary;
+  font-size: $t__body--large;
+  font-weight: $t__weight--book;
+  line-height: $t__lineHeight--normal;
+  color: $c__text;
+}
+
+p + p {
+  margin-bottom: $l__space--small;
 }
 
 a {
-  @include t__noDecoration;
-  display: block;
+  border-bottom: $t__border--pop;
+  display: inline;
 
   p & {
     display: inline;
@@ -29,66 +103,56 @@ em {
   font-style: italic;
 }
 
-p {
+// FOR REMOVAL if not used in the site
+// figcaption {
+//   font-family: $t__font--tertiary;
+//   font-size: $t__body--small;
+//   font-weight: $t__weight--book;
+//
+//   span {
+//     font-weight: $t__weight--bold;
+//   }
+// }
 
-}
-
-h1 {
+blockquote {
   font-family: $t__font--secondary;
-  font-size: $t__title--large;
   font-weight: $t__weight--book;
+  margin-left: $l__space--xxlarge;
+  color: $c__text--dim;
 }
 
-h2 {
+cite {
+  display: block;
+  text-align: right;
   font-family: $t__font--secondary;
-  font-size: $t__title--medium;
-  font-weight: $t__weight--book;
-}
-
-h3 {
-  font-family: $t__font--secondary;
-  font-size: $t__title--small;
-  font-weight: $t__weight--book;
-}
-
-h4 {
-  font-family: $t__font--secondary;
-  font-size: $t__title--small;
-  font-weight: $t__weight--book;
-}
-
-h5 {
-  font-family: $t__font--secondary;
-  font-size: $t__title--xsmall;
-  font-weight: $t__weight--book;
-}
-
-h6 {
-  font-family: $t__font--tertiary;
-  font-size: $t__body--small;
-  font-weight: $t__weight--bold;
-}
-
-figcaption {
-  font-family: $t__font--tertiary;
-  font-size: $t__body--small;
-  font-weight: $t__weight--book;
-
-  span {
-    font-weight: $t__weight--bold;
+  font-style: italic;
+  &:before {
+    content: "— ";
   }
 }
 
-blockquote {
-
-}
-
 ol {
+  font-weight: $t__weight--book;
+  line-height: $t__lineHeight--normal;
+  margin-bottom: $l__space--xsmall;
+
   @include t__orderedList;
+
+  li {
+
+  }
 }
 
 ul {
+  font-weight: $t__weight--book;
+  line-height: $t__lineHeight--normal;
+  margin-bottom: $l__space--xsmall;
+
   @include t__unorderedList;
+
+  li {
+
+  }
 }
 
 div,

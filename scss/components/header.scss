@@ -55,6 +55,7 @@
 
 .nav__container {
   list-style: none;
+  margin-bottom: 0;
 
   @include media($mobile) {
     @include span-columns(6 of 6);
@@ -85,19 +86,28 @@
   transition: 0.1s all ease;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
+  padding: $l__space--small 0;
+  border-bottom-color: $c__text;
+  border-right: $t__border;
 
   @include media($mobile) {
     width: 50%;
     display: none;
+    flex-grow: 0;
 
-    &:nth-child(2n) {
-
+    &:hover {
+      color: $c__pop;
+      border-bottom-color: $c__text;
     }
 
-    &:nth-last-child(2):nth-child(odd) {
-
+    &:nth-child(2n+1) {
+      border-right: none;
     }
+
+    &:last-child, :nth-last-child(2):nth-child(even) {
+      border-bottom: none;
+    }
+
   };
 
   @include media($tablet) {
@@ -105,27 +115,27 @@
     border-top: none;
     width: auto;
     justify-content: center;
+    flex-grow: 1;
+
+    &:nth-child(2n+1) {
+      border-right: $t__border;
+    }
+
+    &:hover {
+      border-bottom-color: $c__pop;
+      color: $c__text;
+    }
 
     &:last-child {
       border-right: none;
     }
 
-    &:nth-child(2) {
-
+    &:last-child, :nth-last-child(2):nth-child(even) {
+      border-bottom: $t__border;
     }
-  };
-
-  @include media($laptop) {
 
   };
 
-  @include media($desktop) {
-
-  };
-
-  &:hover {
-
-  }
 }
 
 .nav__logo {
@@ -208,4 +218,8 @@
 
 .nav--toggled {
   height: 100%;
+}
+
+.body--no-scroll {
+  overflow: hidden;
 }
