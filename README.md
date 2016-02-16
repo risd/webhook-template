@@ -21,18 +21,6 @@ wh create risd-repo-name
 ```
 wh serve
 ```  
-Login to the CMS using the *mgdevelopers@risd.edu* credentials and add yourself as a Team Member
-
-
-**Initiate git in the folder**  
-`cd` to the site folder if you aren't already in it  
-```
-git init
-git add -A
-git commit -m "initial commit"
-git remote add origin https://github.com/risd/repo-name.git
-git push -u origin master
-```
 
 
 ## How to use the template in the site
@@ -44,6 +32,28 @@ Once the file is imported,
 wh deploy
 ``` 
 This will allow you to see the changes in the CMS.
+
+
+## Add yourself and others as team members
+
+You are currently logged in as *mgdevelopers@risd.edu*, and there are no other members added.  
+Under the *Team Members* tab, add yourself, and any other members to the site.  
+Log out, and log back in as yourself.
+
+
+## Initiate git in the folder
+
+`cd` to the site folder if you aren't already in it  
+```
+git init
+git add -A
+git commit -m "initial commit"
+git remote add origin https://github.com/risd/repo-name.git
+git push -u origin master
+```
+
+
+
 
 
 Due to certain restrictions of the process, or the lack of knowledge of the process, there is one extra step that needs to be done after importing the template into your site:  
