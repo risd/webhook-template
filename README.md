@@ -30,7 +30,7 @@ Login to the CMS using the *mgdevelopers@risd.edu* credentials and add yourself 
 git init
 git add -A
 git commit -m "initial commit"
-git remote add origin https://github.com/risd/risd-policies.git
+git remote add origin https://github.com/risd/repo-name.git
 git push -u origin master
 ```
 
