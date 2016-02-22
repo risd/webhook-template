@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
 }
@@ -150,23 +151,112 @@ a {
 }
 
 html {
-  font-family: "sans-serif";
-  line-height: 1.563;
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
   font-weight: 400;
   font-size: 15px;
+  color: black;
 }
 
 body {
   font-size: 1.25rem;
   font-weight: 200;
+  color: black;
+  background-color: white;
+}
+
+main {
+  margin-top: 5.34058rem;
+  margin-bottom: 3.41797rem;
+}
+@media screen and (min-width: 300px) {
+  main {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+h1 {
+  font-family: serif;
+  font-size: 4.76837rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: black;
+}
+
+h2 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 2.44141rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: black;
+}
+
+h3 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: black;
+}
+
+h4 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: black;
+}
+
+h5 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #eea40a;
+}
+
+h6 {
+  font-family: "Consolas", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: black;
+}
+
+p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: black;
+}
+
+p + p {
+  margin-bottom: 1.12rem;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  border: none;
-  outline: none;
-  display: block;
+  border-bottom: 1px solid #eea40a;
+  display: inline;
 }
 p a {
   display: inline;
@@ -181,58 +271,36 @@ em {
   font-style: italic;
 }
 
-h1 {
-  font-family: "serif";
-  font-size: 3.05176rem;
+blockquote {
+  font-family: serif;
   font-weight: 400;
+  margin-left: 3.41797rem;
+  color: black;
 }
 
-h2 {
-  font-family: "serif";
-  font-size: 2.44141rem;
-  font-weight: 400;
+cite {
+  display: block;
+  text-align: right;
+  font-family: serif;
+  font-style: italic;
 }
-
-h3 {
-  font-family: "serif";
-  font-size: 1.95313rem;
-  font-weight: 400;
-}
-
-h4 {
-  font-family: "serif";
-  font-size: 1.95313rem;
-  font-weight: 400;
-}
-
-h5 {
-  font-family: "serif";
-  font-size: 1.5625rem;
-  font-weight: 400;
-}
-
-h6 {
-  font-family: "monospace";
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-figcaption {
-  font-family: "monospace";
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-figcaption span {
-  font-weight: 600;
+cite:before {
+  content: "— ";
 }
 
 ol {
-  list-style-type: decimal-leading-zero;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0.896rem;
+  list-style-type: decimal;
   list-style-position: outside;
   list-style-image: none;
 }
 
 ul {
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0.896rem;
   list-style-type: disc;
   list-style-position: inside;
   list-style-image: none;

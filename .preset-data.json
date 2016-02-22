@@ -1,25 +1,23 @@
 {
   "data": {
     "styleguide": {
-      "-K4YZS0NU4nxv1YxNTpl": {
-        "_sort_create_date": 1449074460,
-        "_sort_last_updated": 1449074460,
-        "_sort_publish_date": 1449074460,
-        "create_date": "2015-12-02T11:41:00-05:00",
+      "-KB8ZdWGKSK2b9kNGIXd": {
+        "_sort_create_date": 1456154460,
+        "_sort_last_updated": 1456154460,
+        "_sort_publish_date": 1456154460,
+        "create_date": "2016-02-22T10:21:00-05:00",
         "element": [
           {
-            "description": "<p>This image will show up when shared on Facebook.\n</p>",
             "title": "Facebook OG Image"
           },
           {
-            "description": "<p>This image will show up when shared on Twitter.\n</p>",
             "title": "Twitter Card Image"
           }
         ],
-        "last_updated": "2015-12-02T11:41:00-05:00",
+        "last_updated": "2016-02-22T10:21:00-05:00",
         "name": "Social MetaData",
-        "preview_url": "9352ec0b-9741-04de-f501-8dc4c59f8b52",
-        "publish_date": "2015-12-02T11:41:00-05:00"
+        "preview_url": "0b4e327a-6f88-ea53-25ef-272965a9c0ff",
+        "publish_date": "2016-02-22T10:21:00-05:00"
       }
     }
   },
@@ -90,12 +88,12 @@
               "label": "Description",
               "locked": false,
               "meta": {
-                "image": true,
+                "image": false,
                 "javascript": true,
                 "link": true,
-                "quote": true,
-                "table": true,
-                "video": true
+                "quote": false,
+                "table": false,
+                "video": false
               },
               "name": "description",
               "required": false,
