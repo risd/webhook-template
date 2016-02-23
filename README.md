@@ -19,7 +19,7 @@ wh create risd-repo-name
 *Use the mgdevelopers@risd.edu account credentials*  
 
 
-## Initiate git in created site folder
+## Initiate git in the site folder
 
 `cd` to the newly created folder for the site and  
 ```
