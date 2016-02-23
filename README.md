@@ -1,14 +1,17 @@
 # This is a webhook template for the RISD Media Group
 
-The template includes Bourbon, Neat, jQuery, jQuery UI, jQuery Sticky, Packery, and PictureFill. More modules to come.
+The template includes Bourbon, Neat, jQuery, jQuery UI, jQuery Sticky, Packery, and PictureFill. More modules to come.  
+Follow the steps below and it should work.
 
-## How to create a webhook site
-**If a repo doens't exist**  
+
+## Create a Github repository
+
 Start by creating a repo on GitHub under the *Media Account*  
 *Do not* create a README file when prompted by Github  
 
 
-**If a webhook instance *isn't* initiated in the repo**  
+## Create a webhook site
+
 `cd` to the folder where you store your websites and  
 ```
 wh create risd-repo-name
@@ -16,34 +19,9 @@ wh create risd-repo-name
 *Use the mgdevelopers@risd.edu account credentials*  
 
 
-**Serve the webhook site**  
-`cd` to the folder the `wh create` made for you, and  
-```
-wh serve
-```  
+## Initiate git in created site folder
 
-
-## How to use the template in the site
-
-When you create a new webhook site, the first time you open the CMS, it will ask you if you want to start from scratch, or use a template.  
-Use the .zip file of this repo as the template.  
-Once the file is imported,  
-```
-wh deploy
-```
-This will allow you to see the changes in the CMS.
-
-
-## Add yourself and others as team members
-
-You are currently logged in as *mgdevelopers@risd.edu*, and there are no other members added.  
-Under the *Team Members* tab, add yourself, and any other members to the site.  
-Log out, and log back in as yourself.
-
-
-## Initiate git in the folder
-
-`cd` to the site folder if you aren't already in it  
+`cd` to the newly created folder for the site and  
 ```
 git init
 git add -A
@@ -53,8 +31,38 @@ git push -u origin master
 ```
 
 
+## Add yourself and others as team members
+
+`wh serve` from the site folder  
+This will open up a webpage at http://localhost:2002/  
+Go to http://localhost:2002/cms  
+Log in using the *mgdevelopers@risd.edu* credentials.  
+In the terminal, deploy the site with `wh deploy`  
+Under the *Team Members* tab, add yourself, and any other members to the site.  
+Log out, and log back in as yourself.  
 
 
+## Set up Git Flow in the repo
+
+```
+git flow init
+git push --set-upstream origin develop
+```
+
+
+## Add the template to the site
+
+When you create a new webhook site, the first time you open the CMS, it will ask you if you want to start from scratch, or use a template.  
+Use the .zip file of this repo as the template.  
+Once the file is imported, it currently will not redirect you to the CMS for some reason, and also will not recognize that you are using a template.  
+The files from the template have been added though, so just click on **Start from scratch** and it should work.  
+```
+wh deploy
+```
+This will allow you to see the changes in the CMS.
+
+
+## Additional steps
 
 Due to certain restrictions of the process, or the lack of knowledge of the process, there is one extra step that needs to be done after importing the template into your site:  
 In `pages/cms.html`,  
@@ -68,13 +76,7 @@ add the line
 ```
 
 
-## How to set up Git Flow for the site
-
-**To initialize git flow:**  
-make sure you've commited and pushed, then  
-```
-git flow init
-```
+## Using Git Flow and Git
 
 **To create a new feature branch:**  
 make sure you're on develop  
