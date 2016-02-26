@@ -11,7 +11,7 @@
 @import "foundation/reset";
 @import "foundation/base";
 //Global components that exist on multiple pages, but not necessarily all pages
-// @import "components/header";
+@import "components/header";
 //Page specific modules, which hopefully can distill down even further into components.
 // @import "pages/home";
 //Test Page
