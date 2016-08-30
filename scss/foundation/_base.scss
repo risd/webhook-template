@@ -1,92 +1,77 @@
 //Basic Setup-------------------------------------------
 html {
-  font-family: $t__font--primary;
-  line-height: $t__lineHeight--normal;
-  font-weight: $t__weight--book;
-  font-size: $t__size--base;
-  color: $c__text;
+  @extend %sans-serif;
+  @include text-size($regular);
+  color: $text-color;
 }
 
 body {
-  font-size: $t__body--large;
-  font-weight: $t__weight--light;
-  color: $c__text;
-  background-color: $c__background;
+  @include text-size($regular);
+  color: $text-color;
+  background-color: $background-color;
 }
 
 main {
-  margin-top: $l__space--xxxlarge;
-  margin-bottom: $l__space--xxlarge;
-  @include media($mobile) {
-      @include outer-container(80vw);
-  };
-  @include media($tablet) {
-      @include outer-container(100vw);
-  };
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 h1 {
-  font-family: $t__font--secondary;
-  font-size: $t__title--xlarge;
-  font-weight: $t__weight--book;
-  line-height: $t__lineHeight--semiTight;
-  color: $c__text;
+  @extend %sans-serif;
+  @include text-size($massive);
+  @extend %all-caps;
+  font-weight: bold;
+  color: $text-color;
 }
 
 h2 {
-  font-family: $t__font--primary;
-  font-size: $t__title--medium;
-  font-weight: $t__weight--bold;
-  line-height: $t__lineHeight--semiTight;
-  color: $c__text;
+  @extend %sans-serif;
+  @include text-size($huge);
+  font-weight: bold;
+  color: $text-color;
 }
 
 h3 {
-  font-family: $t__font--primary;
-  font-size: $t__title--xsmall;
-  font-weight: $t__weight--bold;
-  line-height: $t__lineHeight--semiTight;
-  color: $c__text;
+  @extend %serif;
+  @include text-size($large);
+  color: $text-color;
 }
 
 h4 {
-  font-family: $t__font--primary;
-  font-size: $t__body--large;
-  font-weight: $t__weight--bold;
-  line-height: $t__lineHeight--semiTight;
-  color: $c__text;
+  @extend %sans-serif;
+  @include text-size($medium);
+  @extend %all-caps;
+  font-weight: bold;
+  color: $text-color;
 }
 
 h5 {
-  font-family: $t__font--primary;
-  font-size: $t__body--large;
-  font-weight: $t__weight--book;
-  line-height: $t__lineHeight--normal;
-  color: $c__pop;
+  @extend %sans-serif;
+  @include text-size($regular);
+  @extend %all-caps;
+  font-weight: bold;
+  color: $pop-color;
 }
 
 h6 {
-  font-family: $t__font--tertiary;
-  font-size: $t__body--small;
-  font-weight: $t__weight--bold;
-  line-height: $t__lineHeight--normal;
-  color: $c__text;
+  @extend %sans-serif;
+  @include text-size($regular);
+  font-weight: bold;
+  color: $text-color;
 }
 
 p {
-  font-family: $t__font--primary;
-  font-size: $t__body--large;
-  font-weight: $t__weight--book;
-  line-height: $t__lineHeight--normal;
-  color: $c__text;
+  @extend %sans-serif;
+  @include text-size($regular);
+  color: $text-color;
 }
 
 p + p {
-  margin-bottom: $l__space--small;
+  margin-bottom: 1rem;
 }
 
 a {
-  border-bottom: $t__border--pop;
+  @extend %inline-link;
   display: inline;
 
   p & {
@@ -95,7 +80,7 @@ a {
 }
 
 strong {
-  font-weight: $t__weight--bold;
+  font-weight: bold;
 }
 
 i,
@@ -105,53 +90,50 @@ em {
 
 // FOR REMOVAL if not used in the site
 // figcaption {
-//   font-family: $t__font--tertiary;
-//   font-size: $t__body--small;
-//   font-weight: $t__weight--book;
+// @extend %sans-serif;
+// @include text-size($regular);
 //
 //   span {
-//     font-weight: $t__weight--bold;
 //   }
 // }
 
 blockquote {
-  font-family: $t__font--secondary;
-  font-weight: $t__weight--book;
-  margin-left: $l__space--xxlarge;
-  color: $c__text;
+  @extend %sans-serif;
+  margin-left: 3rem;
+  color: $text-color;
 }
 
 cite {
   display: block;
   text-align: right;
-  font-family: $t__font--secondary;
+  @extend %sans-serif;
   font-style: italic;
   &:before {
     content: "— ";
   }
 }
 
-ol {
-  font-weight: $t__weight--book;
-  line-height: $t__lineHeight--normal;
-  margin-bottom: $l__space--xsmall;
-
-  @include t__orderedList;
-
+ol, ul {
+  list-style-position: outside;
+  list-style-image: none;
+  margin-bottom: 1rem;
   li {
-
-  }
-}
-
-ul {
-  font-weight: $t__weight--book;
-  line-height: $t__lineHeight--normal;
-  margin-bottom: $l__space--xsmall;
-
-  @include t__unorderedList;
-
-  li {
-
+    margin-bottom: 1rem;
+    ul, ol {
+      list-style-position: outside;
+      list-style-image: none;
+      margin-left: 3rem;
+      margin-bottom: 1rem;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+    ul {
+      list-style-type: disc;
+    }
+    ol {
+      // list-style-type: disc;
+    }
   }
 }
 

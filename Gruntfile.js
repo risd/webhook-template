@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           // WebHook will minifiy, so we don't have to here
           style: 'expanded',
           loadPath: require('node-bourbon').includePaths,
-          loadPath: require('node-neat').includePaths
+          sourceMap: true
         },
         files: [{
           expand: 'true',

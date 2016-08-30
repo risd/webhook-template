@@ -1,18 +1,18 @@
 //Third party
+
 @import "bourbon";
-@import "neat-helpers";
-@import "dependencies/gridSettings";
-@import "neat";
 //Variables and mixins
+
+@import "dependencies/responsive";
 @import "dependencies/color";
 @import "dependencies/type";
-@import "dependencies/layout";
+
 //CSS reset and basic styling for html elements.
 @import "foundation/reset";
 @import "foundation/base";
+
 //Global components that exist on multiple pages, but not necessarily all pages
-@import "components/header";
+// @import "components/wysiwyg-custom";
+
 //Page specific modules, which hopefully can distill down even further into components.
-// @import "pages/home";
-//Test Page
 // @import "pages/test";
