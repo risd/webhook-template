@@ -1,82 +1,74 @@
-//Basic Setup-------------------------------------------
+/* ---------------------------------------
+
+Basic Setup
+
+--------------------------------------- */
+
 html {
-  @extend %sans-serif;
-  @include text-size($regular);
+  // @extend %serif;
+  // @extend %sans-serif;
+  // @include text-size($s);
+  font-weight: normal;
   color: $text-color;
 }
 
 body {
-  @include text-size($regular);
+  // @include text-size($s);
+  font-weight: normal;
   color: $text-color;
   background-color: $background-color;
+  overflow-x: hidden;
 }
 
 main {
-  margin-top: 4rem;
-  margin-bottom: 3rem;
+
 }
 
 h1 {
-  @extend %sans-serif;
-  @include text-size($massive);
-  @extend %all-caps;
-  font-weight: bold;
-  color: $text-color;
+
 }
 
 h2 {
-  @extend %sans-serif;
-  @include text-size($huge);
-  font-weight: bold;
-  color: $text-color;
+
 }
 
 h3 {
-  @extend %serif;
-  @include text-size($large);
-  color: $text-color;
+
 }
 
 h4 {
-  @extend %sans-serif;
-  @include text-size($medium);
-  @extend %all-caps;
-  font-weight: bold;
-  color: $text-color;
+
 }
 
 h5 {
-  @extend %sans-serif;
-  @include text-size($regular);
-  @extend %all-caps;
-  font-weight: bold;
-  color: $pop-color;
+
 }
 
 h6 {
-  @extend %sans-serif;
-  @include text-size($regular);
-  font-weight: bold;
-  color: $text-color;
+
 }
 
 p {
-  @extend %sans-serif;
-  @include text-size($regular);
-  color: $text-color;
+  max-width: 40em;
+
+  a {
+    display: inline;
+    // color: $pop-color--1;
+    // border-bottom: 1px solid $text-color;
+    // transition: color 0.2s ease;
+
+    &:hover {
+      // color: $text-color;
+    }
+  }
 }
 
 p + p {
-  margin-bottom: 1rem;
+  // margin-top: 1rem;
 }
 
 a {
-  @extend %inline-link;
-  display: inline;
-
-  p & {
-    display: inline;
-  }
+  text-decoration: none;
 }
 
 strong {
@@ -88,62 +80,53 @@ em {
   font-style: italic;
 }
 
-// FOR REMOVAL if not used in the site
-// figcaption {
-// @extend %sans-serif;
-// @include text-size($regular);
-//
-//   span {
-//   }
-// }
-
-blockquote {
-  @extend %sans-serif;
-  margin-left: 3rem;
-  color: $text-color;
+u {
+  text-decoration: none;
 }
 
-cite {
-  display: block;
-  text-align: right;
-  @extend %sans-serif;
-  font-style: italic;
-  &:before {
-    content: "— ";
+figcaption {
+
+  span {
+
   }
 }
 
-ol, ul {
-  list-style-position: outside;
-  list-style-image: none;
-  margin-bottom: 1rem;
+blockquote {
+
+}
+
+cite {
+
+  &:before {
+    // content: "— ";
+  }
+}
+
+ol {
+
   li {
-    margin-bottom: 1rem;
-    ul, ol {
-      list-style-position: outside;
-      list-style-image: none;
-      margin-left: 3rem;
-      margin-bottom: 1rem;
-      li {
-        margin-bottom: 1rem;
-      }
-    }
-    ul {
-      list-style-type: disc;
-    }
-    ol {
-      // list-style-type: disc;
-    }
+
+  }
+}
+
+ul {
+
+  li {
+
   }
 }
 
 div,
 img {
-  width: 100%;
+
 }
 
 iframe {
   width: 100%;
 }
 
-//Extra Setup ---------------------------------------
+/* ---------------------------------------
+
+Extra Setup
+
+--------------------------------------- */

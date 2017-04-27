@@ -5,8 +5,9 @@ $breakpoints: (
   small: 512px,
   medium: 768px,
   large: 1024px,
-  huge: 1280px
-) !default;
+  huge: 1440px,
+  massive: 1800px
+);
 
 @mixin respond-above($breakpoint, $breakpoints: $breakpoints) {
   $min-width: map-get($breakpoints, $breakpoint) + 1;

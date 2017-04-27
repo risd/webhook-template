@@ -1,5 +1,4 @@
 global.jQuery = require('jquery');
+global.$ = global.jQuery;
 
-var exampleModule = require('./exampleModule.js')();
-var stickyNav = require('./stickyNav.js')();
-var mobileMenuToggle = require('./mobileMenuToggle.js')();
+// var exampleModule = require('./exampleModule.js')();
