@@ -43,14 +43,14 @@
     "grunt-simple-watch": "~0.1.2",
     "grunt-usemin": "~2.0.2",
     "imagesloaded": "^3.1.8",
-    "jquery": "^2.1.4",
+    "jquery": "^3.3.1",
     "jquery-bridget": "^1.1.0",
     "jquery-sticky": "^1.0.3",
     "jquery-ui": "^1.10.5",
     "lodash": "~2.4.1",
     "marked": "~0.3.1",
     "mkdirp": "~0.3.5",
-    "moment": "~2.8.1",
+    "moment": "~2.21.0",
     "node-bourbon": "^4.2.3",
     "node-sass": "^4.5.2",
     "nodejs-websocket": "~1.2.0",
@@ -69,6 +69,8 @@
     "ws": "~0.4.31"
   },
   "devDependencies": {
-    "connect-header": "0.0.5"
+    "connect-header": "0.0.5",
+    "grunt-cli": "^1.2.0",
+    "rm-webhook": "^1.1.1"
   }
 }
